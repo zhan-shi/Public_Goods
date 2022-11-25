@@ -1,0 +1,63 @@
+\documentclass[11pt, a4paper, reqno]{article}
+
+\usepackage{a4wide}
+\usepackage[utf8]{inputenc}
+\usepackage{float, afterpage, rotating, graphicx, color}
+\usepackage{epstopdf}
+\usepackage{longtable, booktabs, tabularx}
+\usepackage{fancyvrb, moreverb, relsize}
+\usepackage{calc}
+\usepackage{amsmath, amssymb, amsthm, bm, bbm, multirow, nicefrac}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\usepackage{caption}
+\usepackage{mdwlist}
+\usepackage{xfrac}
+\usepackage{setspace}
+\usepackage{subcaption}
+\usepackage{minibox}
+\usepackage{natbib}
+\usepackage{threeparttable, ltxtable, float, dcolumn, lscape, authblk, setspace}
+\usepackage{bookmark}
+
+\newcommand{\sym}[1]{\rlap{#1}}
+
+
+\begin{document}
+
+
+\section{Uesful resources}
+
+https://statatexblog.com/
+
+
+
+\section{Stata Table Example}
+
+
+\begin{table}[h!]
+    \caption{Example Table from Stata WITH RESIZING}\label{tab:example1}
+    \centering
+    \resizebox{\textwidth}{!}{
+    \input{eg.tex}
+    }
+    \vspace{.25em}
+    \caption*{\footnotesize \textbf{Notes:} * $p$ $<$ 0.1, ** $p$ $<$ 0.05, *** $p$ $<$ 0.01.This is an example table. }
+\end{table}
+
+\clearpage
+
+
+
+\section{Stata Table Example WITHOUT RESIZING}
+\begin{table}[h!]
+    \caption{Example Table from Stata}\label{tab:example2}
+    \centering
+    \input{eg.tex}
+    \vspace{.25em}
+    \caption*{\footnotesize \textbf{Notes:} * $p$ $<$ 0.1, ** $p$ $<$ 0.05, *** $p$ $<$ 0.01.This is an example table. }
+\end{table}
+
+
+
+
+\end{document}
